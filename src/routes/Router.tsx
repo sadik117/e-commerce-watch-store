@@ -2,6 +2,9 @@ import HomePage from "../pages/HomePage.tsx";
 import ProductPage from "../pages/ProductPage.tsx";
 import CartPage from "../pages/CartPage.tsx";
 import CheckoutPage from "../pages/CheckoutPage.tsx";
+import CollectionsPage from "../pages/CollectionsPage.tsx";
+import AboutPage from "../pages/AboutPage.tsx";
+import ContactPage from "../pages/ContactPage.tsx";
 import { createBrowserRouter } from "react-router-dom";
 import Mainlayout from "../components/layout/MainLayout.tsx";
 import ErrorPage from "../pages/ErrorPage.tsx";
@@ -27,6 +30,18 @@ export const router = createBrowserRouter([
         { 
             path: "checkout", 
             Component: CheckoutPage 
+        },
+        { 
+            path: "collections", 
+            Component: CollectionsPage 
+        },
+        { 
+            path: "about", 
+            Component: AboutPage 
+        },
+        { 
+            path: "contact", 
+            Component: ContactPage 
         },
     ],
   },
