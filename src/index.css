@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
-/* ===== CHRONOS Design System — Tailwind v4 Theme ===== */
 @theme {
-  /* Brand Colors */
+
   --color-bg: #0A0A0A;
   --color-surface: #141414;
   --color-surface-hover: #1E1E1E;
@@ -15,33 +14,27 @@
   --color-success: #4ADE80;
   --color-error: #F87171;
 
-  /* Typography */
+
   --font-heading: "Playfair Display", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  /* Spacing Scale (supplements Tailwind defaults) */
   --spacing-section: 6rem;
   --spacing-section-mobile: 3.5rem;
 
-  /* Animations */
   --ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
   --duration-base: 300ms;
   --duration-slow: 600ms;
 }
 
-/* ===== Base Styles ===== */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.container-custom {
+  @apply mx-auto px-4 sm:px-6 lg:px-10 max-w-screen-2xl;
 }
 
 body {
@@ -54,8 +47,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  line-height: 1.2;
-  font-weight: 600;
+  line-height: 1;
+  font-weight: 400;
 }
 
 a {
@@ -82,7 +75,6 @@ input, textarea, select {
   background: transparent;
 }
 
-/* ===== Scrollbar Styling ===== */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -100,9 +92,6 @@ input, textarea, select {
   background: var(--color-gold);
 }
 
-/* ===== Custom Utilities ===== */
-
-/* Gold gradient text */
 .text-gold-gradient {
   background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light));
   -webkit-background-clip: text;
@@ -110,7 +99,6 @@ input, textarea, select {
   background-clip: text;
 }
 
-/* Glass-morphism card */
 .glass {
   background: rgba(20, 20, 20, 0.7);
   backdrop-filter: blur(12px);
@@ -118,50 +106,12 @@ input, textarea, select {
   border: 1px solid rgba(201, 169, 110, 0.1);
 }
 
-/* Gold accent line (decorative) */
 .accent-line {
   width: 60px;
   height: 2px;
   background: linear-gradient(90deg, var(--color-gold), transparent);
 }
 
-/* Section padding utility */
-.section-padding {
-  padding-top: var(--spacing-section);
-  padding-bottom: var(--spacing-section);
-}
-
-@media (max-width: 768px) {
-  .section-padding {
-    padding-top: var(--spacing-section-mobile);
-    padding-bottom: var(--spacing-section-mobile);
-  }
-}
-
-/* Container */
-.container-custom {
-  width: 100%;
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-/* Hover image zoom */
-.img-zoom {
-  overflow: hidden;
-}
-
-.img-zoom img {
-  transition: transform var(--duration-slow) var(--ease-luxury);
-}
-
-.img-zoom:hover img {
-  transform: scale(1.08);
-}
-
-/* Shimmer / loading skeleton */
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
@@ -178,7 +128,6 @@ input, textarea, select {
   animation: shimmer 1.5s infinite;
 }
 
-/* Gold border glow on hover */
 .gold-glow {
   transition: box-shadow var(--duration-base) var(--ease-luxury),
               border-color var(--duration-base) var(--ease-luxury);
