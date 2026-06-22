@@ -29,7 +29,7 @@ export default function NewArrivals({ products }: NewArrivalsProps) {
       <div className="container-custom">
         <div className="text-center mb-10">
           <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-2">Latest Additions</p>
-          <h2 className="font-heading text-4xl md:text-5xl font-semibold">New Arrivals</h2>
+          <h2 className="font-heading text-3xl md:text-4xl font-semibold">New Arrivals</h2>
           <div className="accent-line mx-auto mt-6" />
         </div>
 

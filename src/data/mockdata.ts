@@ -128,7 +128,7 @@ export const products: Product[] = [
       "Date magnifier at 3 o'clock",
     ],
     category: "Diver",
-    images: [WATCH_IMAGES.diver2, WATCH_IMAGES.diver1, WATCH_IMAGES.diver3, WATCH_IMAGES.lifestyle2],
+    images: [WATCH_IMAGES.diver1, WATCH_IMAGES.diver3, WATCH_IMAGES.lifestyle2],
     rating: 4.6,
     reviewCount: 189,
     badge: "sale",

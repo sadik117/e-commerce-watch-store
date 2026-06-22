@@ -63,10 +63,10 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
           </div>
 
           <div className="p-4">
-            <p className="text-[var(--color-text-muted)] text-xs tracking-widest uppercase mb-1">
+            <p className="text-[var(--color-text-muted)] text-xs tracking-widest uppercase mb-2">
               {product.brand}
             </p>
-            <h3 className="font-heading text-lg font-medium mb-2 group-hover:text-[var(--color-gold)] transition-colors duration-300">
+            <h3 className="font-heading text-lg font-medium mb-3 group-hover:text-[var(--color-gold)] transition-colors duration-300">
               {product.name}
             </h3>
 

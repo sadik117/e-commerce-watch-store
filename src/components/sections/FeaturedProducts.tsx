@@ -27,7 +27,7 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
   return (
     <section id="collection" className="py-10 bg-[var(--color-surface)] border-y border-[var(--color-border)]">
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -35,7 +35,7 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
             transition={{ duration: 0.6 }}
           >
             <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-2">Curated Selection</p>
-            <h2 className="font-heading text-4xl md:text-5xl font-semibold">Featured Masterpieces</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-semibold">Featured Masterpieces</h2>
             <div className="accent-line mt-6" />
           </motion.div>
           

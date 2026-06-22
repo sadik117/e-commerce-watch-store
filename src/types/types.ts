@@ -52,3 +52,23 @@ export interface CartContextValue {
   clearCart: () => void;
   isInCart: (productId: number) => boolean;
 }
+
+
+export type PaymentMethod = "credit-card"
+
+export interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  address: string;
+  city: string;
+  state: string;
+  zip: string;
+  country: string;
+  payment: PaymentMethod;
+  cardNumber: string;
+  cardName: string;
+  expiry: string;
+  cvv: string;
+}

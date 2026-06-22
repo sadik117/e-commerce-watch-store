@@ -1,19 +1,27 @@
-export default function HomePage() {
-  return (
-    <div className="pt-20">
+import { products } from "../data/mockdata.ts";
+import Hero from "../components/sections/Hero.tsx";
+import FeaturedProducts from "../components/sections/FeaturedProducts.tsx";
+import WhyChooseUs from "../components/sections/WhyChooseUs.tsx";
+import NewArrivals from "../components/sections/NewArrivals.tsx";
+import Newsletter from "../components/sections/Newsletter.tsx";
+import BestSellers from "../components/sections/BestSeller.tsx";
+import SpecialOffers from "../components/sections/SpecialOffers.tsx";
+import CustomerReviews from "../components/sections/CustomerReviews.tsx";
 
-      <section className="section-padding container-custom flex flex-col items-center justify-center text-center min-h-[60vh]">
-        <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-medium">
-          Engineered for Eternity
-        </p>
-        <h1 className="text-5xl md:text-7xl font-semibold mb-6">
-          <span className="text-gold-gradient">CHRONOS</span>
-        </h1>
-        <p className="text-[var(--color-text-muted)] max-w-lg text-lg">
-          Luxury timepieces crafted with Swiss precision. Sections coming soon.
-        </p>
-        <div className="accent-line mx-auto mt-8" />
-      </section>
+export default function HomePage() {
+  const featuredProducts = products.filter((p) => p.features).slice(0, 4);
+  const newArrivals = products.filter((p) => p.badge === "new").slice(0, 4);
+
+  return (
+    <div>
+      <Hero />
+      <FeaturedProducts products={featuredProducts} />
+      <NewArrivals products={newArrivals} />
+      <BestSellers />
+      <SpecialOffers />
+      <WhyChooseUs />
+      <CustomerReviews />
+      <Newsletter />
     </div>
   );
 }
